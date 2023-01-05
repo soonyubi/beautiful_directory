@@ -12,6 +12,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   TextEditingController tc = TextEditingController();
+  String project_name = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,16 +48,24 @@ class _WelcomePageState extends State<WelcomePage> {
                           Text("새 프로젝트 생성"),
                           TextField(
                             autofocus: true,
+                            controller: tc,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.back();
+                                },
                                 child: Text("cancel"),
                               ),
                               TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    project_name = tc.text;
+                                    print(project_name);
+                                  });
+                                },
                                 child: Text("add"),
                               )
                             ],
