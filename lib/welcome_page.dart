@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:mindmap/mindmap_widget.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -65,6 +66,8 @@ class _WelcomePageState extends State<WelcomePage> {
                                     project_name = tc.text;
                                     print(project_name);
                                   });
+                                  Get.to(MindMapWidget(),
+                                      arguments: project_name);
                                 },
                                 child: Text("add"),
                               )

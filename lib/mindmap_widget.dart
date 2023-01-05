@@ -6,8 +6,8 @@ import 'package:mindmap/mindmap_painter.dart';
 import 'package:mindmap/node.dart';
 
 class MindMapWidget extends StatefulWidget {
-  MindMapWidget({super.key, required this.tree});
-  Node tree;
+  MindMapWidget({super.key});
+
   @override
   State<MindMapWidget> createState() => _MindMapWidgetState();
 }

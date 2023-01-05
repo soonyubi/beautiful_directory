@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mindmap/mindmap_page.dart';
+
 import 'package:mindmap/mindmap_widget.dart';
 import 'package:mindmap/welcome_page.dart';
 import 'package:get/get.dart';
