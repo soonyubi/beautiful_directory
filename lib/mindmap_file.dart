@@ -1,4 +1,4 @@
-import 'package:mindmap/node.dart';
+import 'package:mindmap/model/node.dart';
 
 class MindMapFile {
   String? filename;

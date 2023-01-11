@@ -2,8 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+
 import 'package:mindmap/mindmap_painter.dart';
-import 'package:mindmap/node.dart';
+import 'package:mindmap/model/node.dart';
 
 class MindMapWidget extends StatefulWidget {
   MindMapWidget({super.key});
@@ -17,9 +20,12 @@ class _MindMapWidgetState extends State<MindMapWidget> {
   bool _focused = false;
   final _controller = TextEditingController();
   final _textStyle = TextStyle(color: Colors.black, fontSize: 30);
+  String project_name = Get.arguments;
+
   void _handleFocusChange() {}
   @override
   void initState() {
+    tree.value = project_name;
     super.initState();
   }
 
@@ -28,14 +34,14 @@ class _MindMapWidgetState extends State<MindMapWidget> {
     super.dispose();
   }
 
-  Node tree = Node("Begin Here");
+  Node tree = Node("");
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("project"),
+          title: Text("$project_name"),
           centerTitle: true,
           backgroundColor: Colors.transparent,
         ),

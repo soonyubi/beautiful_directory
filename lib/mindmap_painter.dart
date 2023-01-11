@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mindmap/node.dart';
+import 'package:mindmap/model/node.dart';
 
 class MindMapPainter extends CustomPainter {
   final Node tree;

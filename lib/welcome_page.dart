@@ -21,7 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Column(
         children: [
           Container(
-            width: double.maxFinite,
+            width: double.maxFinite, 
             height: 300,
             child: const Center(
               child: Text("Beautiful Directory",
@@ -64,8 +64,9 @@ class _WelcomePageState extends State<WelcomePage> {
                                 onPressed: () {
                                   setState(() {
                                     project_name = tc.text;
-                                    print(project_name);
+                                    tc.clear();
                                   });
+                                  Get.back();
                                   Get.to(MindMapWidget(),
                                       arguments: project_name);
                                 },
@@ -87,6 +88,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
           Divider(color: Colors.yellow),
+          
         ],
       ),
     );
